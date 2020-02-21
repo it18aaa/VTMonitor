@@ -15,6 +15,7 @@ async function getStatus(credentials, url) {
     ]);
 
     const data = await page.evaluate(() => {
+        // TODO: easier way to do this
         const tds = Array.from(document.querySelectorAll('.label'));
         return tds.map(td => td.innerText);
     });

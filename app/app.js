@@ -31,7 +31,7 @@ function schedule(config) {
         .catch(err => console.error('error in scheduler', err));
 };
 
-// get process 
+// scrape status and do 'stuff' with it.
 async function checkVisionTime(config) {
 
     var hour = new Date().getHours();
@@ -82,7 +82,6 @@ async function checkVisionTime(config) {
                     Start hour: ${config.hourStart}
                     End hour: ${config.hourEnd}`);
     }
-
 
 }
 
